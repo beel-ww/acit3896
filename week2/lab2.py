@@ -16,7 +16,7 @@ def add_front(num):
         new_list = one_num + nums_list
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -29,7 +29,7 @@ def apnd(num):
         new_list = nums_list.append(1)
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -42,7 +42,7 @@ def remove_front(num):
         new_list = nums_list[1:]
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -54,7 +54,7 @@ def popping(num):
         new_list = nums_list.pop()
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -78,7 +78,7 @@ def linear_exists(num):
         linear_search(haystack, 5)
         end_time = time.perf_counter()
         
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -91,7 +91,7 @@ def linear_existnt(num):
         linear_search(nums, 1)
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -111,7 +111,7 @@ def dct_exists(num):
         key_check(d, 1)
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
@@ -126,7 +126,7 @@ def dct_existnt(num):
         key_check(d, num+1)
         end_time = time.perf_counter()
 
-        delta = (end_time - start_time) * 1000
+        delta = (end_time - start_time) * 1000000
         deltas.append(delta)
     means.append(statistics.mean(deltas))
     deltas.clear()
