@@ -77,6 +77,7 @@ def binary_search_multi(n: int, h: List[int]) -> List[int]:
         elif h[mid] < n:
             start = mid + 1
 
-    return sorted(indexes)
+    return indexes
+    # return sorted(indexes)
 
 print(binary_search_multi(3, [1, 2, 2, 3, 3, 3, 4, 5]))
