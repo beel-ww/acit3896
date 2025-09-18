@@ -7,11 +7,10 @@ means: List[int] = []
 deltas = []
 num_tests = 1000
 
-def add_front(num):
-    one_num = [1]
-    nums_list = [i for i in range(num)]
-    
+def add_front(num):    
     for _ in range(num_tests):
+        one_num = [1]
+        nums_list = [0 for _ in range(num)]
         start_time = time.perf_counter()
         new_list = one_num + nums_list
         end_time = time.perf_counter()
@@ -22,9 +21,8 @@ def add_front(num):
     deltas.clear()
 
 def apnd(num):
-    nums_list = [i for i in range(num)]
-    
     for _ in range(num_tests):
+        nums_list = [0 for _ in range(num)]
         start_time = time.perf_counter()
         new_list = nums_list.append(1)
         end_time = time.perf_counter()
@@ -35,9 +33,8 @@ def apnd(num):
     deltas.clear()
 
 def remove_front(num):
-    nums_list = [i for i in range(num)]
-    
     for _ in range(num_tests):
+        nums_list = [0 for _ in range(num)]
         start_time = time.perf_counter()
         new_list = nums_list[1:]
         end_time = time.perf_counter()
@@ -49,7 +46,7 @@ def remove_front(num):
 
 def popping(num):
     for _ in range(num_tests):
-        nums_list = [i for i in range(num)]
+        nums_list = [0 for _ in range(num)]
         start_time = time.perf_counter()
         new_list = nums_list.pop()
         end_time = time.perf_counter()
