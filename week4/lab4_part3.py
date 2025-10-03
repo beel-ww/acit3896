@@ -10,6 +10,9 @@ def reverse(lln: LLN):
         nodes.append(curr)
         curr = curr.next
 
+    if len(nodes) <= 1:
+        return nodes
+
     nodes[0].next = None
     for i in range(1, len(nodes)):
         nodes[i].next = nodes[i-1]
